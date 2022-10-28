@@ -13,19 +13,15 @@ else:
     print ("The result of the operation: ", end="")
 
 if operation == "+":
-      print (str(value_a + value_b))
-
+    print (str(value_a + value_b))
 elif operation == "-":
-        print(str (value_a - value_b)) 
-
+    print(str (value_a - value_b)) 
 elif operation == "*":
-        print(str (value_a * value_b))
-
+    print(str (value_a * value_b))
 elif operation == "/":
-        print(str (value_a / value_b))
-
+    print(str (value_a / value_b))
 elif operation == "^":
-        print(str (value_a * value_a))
+    print(str (value_a * value_a))
 else:
     print("You entered an incorrect operation")
 

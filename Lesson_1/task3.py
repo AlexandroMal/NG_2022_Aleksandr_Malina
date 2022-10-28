@@ -1,17 +1,14 @@
-import time
-import datetime
+seconds_number = int(input("Enter the number of seconds:"))
 
-timestamp = int(input("Enter number of seconds: "))
-value = datetime.datetime.fromtimestamp(timestamp, tz=datetime.timezone.utc)
+days = seconds_number // (3600 * 24)
+days_value = seconds_number % (3600 * 24)
+hour = days_value // 3600
+hour_value = days_value % 3600
+min = hour_value // 60
+seconds = hour_value % 60
 
-print("=============================")
-print("Year: " f"{value:%Y}")
-print("Month: " f"{value:%m}")
-print("Day: " f"{value:%d}")
-print("=============================")
-print("Hours: " f"{value:%H}")
-print("Minutes: " f"{value:%M}")
-print("Seconds: " f"{value:%S}")
-print("=============================")
-print( f"{value:%Y-%m-%d %H:%M:%S}")
-print("=============================")
+print("Days:", days, end = " - ")
+print(hour,min,seconds, sep =":")
+
+
+

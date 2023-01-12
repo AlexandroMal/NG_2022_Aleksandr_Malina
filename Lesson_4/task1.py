@@ -42,6 +42,7 @@ def infoList(informList):  #information output
     "i) Python build;", status(informList["i"]),"\n",
     "j) Python compiler;", status(informList["j"]),"\n",
     )
+    console.print(" y) [bold green]Proceed")
     console.rule("[bold red]InformList")
 
 def dictionaryNew():

@@ -27,21 +27,21 @@ def numbers_elements(string):
     print("Elements og numbers: ", len(string))
 
 def letter_count(String):
-    a = []
+    result = []
     print("You wanna vowel or consonant letters?","1 - Vowel letters;","2 - Consonant letter.", sep="\n")
     choice = input("Enter: ")
 
     if choice == "1":
         for letter in String:
             if letter in "aeiou":
-                a.append(letter)
-        print(a)
+                result.append(letter)
+        print(result)
 
     if choice == "2":
         for letter in String:
             if letter in 'bcdfghjklmnpqrstvwxz':
-                a.append(letter)
-        print(a)
+                result.append(letter)
+        print(result)
     
 def find_elements(string):
     index = int(input("Enter number of element: "))
@@ -65,14 +65,18 @@ def choice_menu():
         choice_menu()
     if inputOperation == "7":
         exit
+
+def tryAgain():
+    again = input("If you wanna try again enter -yes-, or program to close: ")
+    print(again)
+    if again == "yes":
+        main()
+    else:
+        exit
     
 def main():
     out_information()
     choice_menu()
-    again = input("If you wanna try again enter -Yes-, or program to close: ")
-    if again == "Yes" or "yes":
-        main()
-    else:
-        exit
+    tryAgain()
 
 main()

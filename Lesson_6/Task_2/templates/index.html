@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Info About PC</title>
+        
+    </head>
+    <body>
+        <div class="checkbox">
+            <form action="/procces">
+                <input type="checkbox" id="components" name="components" value="CPU">
+                <label for="components">Full CPU Name</label><br>
+                <input type="checkbox" id="components3" name="components" value="System">
+                <label for="components3">System name</label><br>
+                <input type="checkbox" id="components3" name="components" value="Network">
+                <label for="components3">Network name</label><br>
+                <input type="checkbox" id="components3" name="components" value="SysRelease">
+                <label for="components3">System release</label><br>
+                <input type="checkbox" id="components3" name="components" value="SysVersion">
+                <label for="components3">System version</label><br>
+                <input type="checkbox" id="components3" name="components" value="PythonVer">
+                <label for="components3">Python version</label><br>
+                <input type="checkbox" id="components3" name="components" value="PythonCompiler">
+                <label for="components3">Python compiler</label><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+            <div>
+                {{usertable|safe}}
+            </div>
+    </body>
+</html>

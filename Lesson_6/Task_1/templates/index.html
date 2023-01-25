@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chat</title>
+        <style>
+
+
+            .message {
+                margin: 10px;
+                display: block;
+                padding: 10px;
+                
+            }
+
+            form { 
+                margin: 10px;
+                padding: 10px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size: 20px;
+            }
+
+            form input{
+                width: 250px;
+                height: 25px;
+            }
+
+            form textarea{
+                width: 250px;
+                height: 150px;
+                font-size: 20px;
+            }
+
+            form button{
+                width: 250px;
+                height: 50px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <form action="/updates" class="">
+                <label>Write your login:</label><br>
+                <input type="text" name="login_input"><br>
+                <label>Write your message:</label><br>
+                <textarea name="message_input"></textarea><br>
+                <button>Enter</button>
+            </form>
+            <div id="text" name="message" class="message">
+                {{users|safe}}
+            </div>
+        </div>
+
+    </body>
+    <script>
+        function updatePage() {
+            const xhr = new XMLHttpRequest();
+            xhr.onload=function(){
+                document.getElementById("text").innerHTML = this.responseText;
+            }
+            xhr.open("GET", "/updatepage", true);
+            xhr.send();
+        }
+        window.setInterval(() => {
+            updatePage();
+        }, 1000);
+    </script>
+</html>

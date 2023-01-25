@@ -2,7 +2,7 @@ def resultOperation(number,letters,string):
     if number < len(string):
         elements = string[number]
         try:
-            letters[elements] = letters[elements] == 0
+            letters[elements] = string.count(elements)
         except:
             letters[elements] = 1
         resultOperation(number + 1,letters,string)
